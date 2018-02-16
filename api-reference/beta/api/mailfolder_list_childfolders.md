@@ -4,6 +4,7 @@
 
 Get the folder collection under the specified folder. You can use the `.../me/MailFolders` shortcut to get the top-level 
 folder collection and navigate to another folder.
+
 ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](../../../concepts/permissions_reference.md).
 
@@ -19,8 +20,10 @@ One of the following permissions is required to call this API. To learn more, in
 GET /me/mailFolders/{id}/childFolders
 GET /users/{id | userPrincipalName}/mailFolders/{id}/childFolders
 ```
+
 ## Optional query parameters
-This method supports the [OData Query Parameters](http://developer.microsoft.com/en-us/graph/docs/overview/query_parameters) to help customize the response.
+This method supports the [OData Query Parameters](../../../concepts/query_parameters.md) to help customize the response.
+
 ## Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
@@ -30,20 +33,23 @@ This method supports the [OData Query Parameters](http://developer.microsoft.com
 Do not supply a request body for this method.
 
 ## Response
-
 If successful, this method returns a `200 OK` response code and collection of [MailFolder](../resources/mailfolder.md) objects in the response body.
+
 ## Example
-##### Request
-Here is an example of the request.
+#### Request
+The following is an example of the request.
 <!-- {
   "blockType": "request",
   "name": "get_childfolders"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/me/mailFolders/{id}/childFolders
+GET https://graph.microsoft.com/beta/me/mailFolders/AAMkAGVmMDEzMTM4LTZmYWUtNDdkNC1hMDZiLTU1OGY5OTZhYmY4OAAuAAAAAAAiQ8W967B7TKBjgx9rVEURAQAiIsqMbYjsT5e-T7KzowPTAAAAAAEMAAA=/childFolders
 ```
-##### Response
-Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
+
+#### Response
+The following is an example of the response.
+>**Note:** The response object shown here might be shortened for readability. All the properties will be returned from an actual call.
+
 <!-- {
   "blockType": "response",
   "truncated": true,
@@ -58,12 +64,22 @@ Content-length: 232
 {
   "value": [
     {
-      "displayName": "displayName-value",
-      "parentFolderId": "parentFolderId-value",
-      "childFolderCount": 99,
-      "unreadItemCount": 99,
-      "totalItemCount": 99,
-      "id": "id-value"
+        "id": "AAMkAGVmMDEzMTM4LTZmYWUtNDdkNC1hMDZiLTU1OGY5OTZhYmY4OAAuAAAAAAAiQ8W967B7TKBjgx9rVEURAQAiIsqMbYjsT5e-T7KzowPTAAAYbtbpAAA=",
+        "displayName": "Internal Screens",
+        "parentFolderId": "AAMkAGVmMDEzMTM4LTZmYWUtNDdkNC1hMDZiLTU1OGY5OTZhYmY4OAAuAAAAAAAiQ8W967B7TKBjgx9rVEURAQAiIsqMbYjsT5e-T7KzowPTAAAAAAEMAAA=",
+        "childFolderCount": 0,
+        "unreadItemCount": 2,
+        "totalItemCount": 2,
+        "wellKnownName": null
+    },
+    {
+        "id": "AAMkAGVmMDEzMTM4LTZmYWUtNDdkNC1hMDZiLTU1OGY5OTZhYmY4OAAuAAAAAAAiQ8W967B7TKBjgx9rVEURAQAiIsqMbYjsT5e-T7KzowPTAAAYbtbqAAA=",
+        "displayName": "Project Falcon",
+        "parentFolderId": "AAMkAGVmMDEzMTM4LTZmYWUtNDdkNC1hMDZiLTU1OGY5OTZhYmY4OAAuAAAAAAAiQ8W967B7TKBjgx9rVEURAQAiIsqMbYjsT5e-T7KzowPTAAAAAAEMAAA=",
+        "childFolderCount": 0,
+        "unreadItemCount": 5,
+        "totalItemCount": 5,
+        "wellKnownName": null
     }
   ]
 }

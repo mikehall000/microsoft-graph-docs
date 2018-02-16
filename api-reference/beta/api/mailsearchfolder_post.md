@@ -1,8 +1,8 @@
-# Create mailFolder
+# Create mailSearchFolder
 
 > **Important:** APIs under the /beta version in Microsoft Graph are in preview and are subject to change. Use of these APIs in production applications is not supported.
 
-Use this API to create a new child [mailFolder](../resources/mailfolder.md).
+Use this API to create a new [mailSearchFolder](../resources/mailsearchfolder.md).
 
 ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](../../../concepts/permissions_reference.md).
@@ -30,12 +30,14 @@ Specify the parent folder in the query URL as a folder ID, or the `Inbox`, `Draf
 | Content-Type  | application/json. Required.  |
 
 ## Request body
-In the request body, provide a JSON object with the following parameters. **displayName** is the only writable property for a 
-[MailFolder](../resources/mailfolder.md) object.
+In the request body, provide a JSON object with the following parameters.
 
 | Parameter	   | Type	|Description|
 |:---------------|:--------|:----------|
-|displayName|String|The display name of the new folder.|
+| displayName |String |The display name of the new folder.|
+| includeNestedFolders | Boolean | How the mailbox folder hierarchy should be traversed. `True` means that a deep search should be done while `False` means a shallow search should be done instead. |
+| sourceFolderIDs | String collection | The mailbox folders that should be mined. |
+| filterQuery | String | The OData query to filter the messages. |
 
 ## Response
 If successful, this method returns `201 Created` response code and [MailFolder](../resources/mailfolder.md) object in the response body.
@@ -45,7 +47,7 @@ If successful, this method returns `201 Created` response code and [MailFolder](
 The following is an example of the request.
 <!-- {
   "blockType": "request",
-  "name": "create_mailfolder_from_mailfolder"
+  "name": "create_mailsearchfolder"
 }-->
 ```http
 POST https://graph.microsoft.com/beta/me/mailFolders/{id}/childFolders
@@ -54,6 +56,9 @@ Content-length: 159
 
 {
   "displayName": "displayName-value",
+  "includeNestedFolders": True,
+  "sourceFolderIDs": ["AAMkAGVmMDEzMTM4LTZmYWUtNDdkNC1hMDZiLTU1OGY5OTZhYmY4OAAuAAAAAAAiQ8W967B7TKBjgx9rVEURAQAiIsqMbYjsT5e-T7KzowPTAAAAAAEMAAA="],
+  "filterQuery": "((Sender/EmailAddress/Address eq 'admin@abc.com' and contains(Subject, 'some message')))"
 }
 ```
 
@@ -63,7 +68,7 @@ The following is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.mailFolder"
+  "@odata.type": "microsoft.graph.mailSearchFolder"
 } -->
 ```http
 HTTP/1.1 200 OK
@@ -76,7 +81,11 @@ Content-length: 179
   "childFolderCount": 99,
   "unreadItemCount": 99,
   "totalItemCount": 99,
-  "id": "id-value"
+  "id": "id-value",
+  "isSupported": True,
+  "includeNestedFolders": True,
+  "sourceFolderIDs": ["AAMkAGVmMDEzMTM4LTZmYWUtNDdkNC1hMDZiLTU1OGY5OTZhYmY4OAAuAAAAAAAiQ8W967B7TKBjgx9rVEURAQAiIsqMbYjsT5e-T7KzowPTAAAAAAEMAAA="],
+  "filterQuery": "((Sender/EmailAddress/Address eq 'admin@abc.com' and contains(Subject, 'some message')))"
 }
 ```
 
@@ -84,7 +93,7 @@ Content-length: 179
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "Create mailFolder",
+  "description": "Create mailSearchFolder",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""
