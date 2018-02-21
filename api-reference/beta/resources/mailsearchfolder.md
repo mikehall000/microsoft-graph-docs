@@ -20,7 +20,7 @@ A mailSearchFolder is a virtual folder in the user's mailbox that contains all t
 | Property | Type | Description |
 |:---------------|:--------|:----------|
 | isSupported | Boolean | Indicates whether a search folder is editable using REST APIs. |
-| includeNestedFolders | Boolean | Indicates how the mailbox folder hierarchy should be traversed. `True` means that a deep search should be done while `False` means a shallow search should be done instead. |
+| includeNestedFolders | Boolean | Indicates how the mailbox folder hierarchy should be traversed. `true` means that a deep search should be done while `false` means a shallow search should be done instead. |
 | sourceFolderIDs | String collection | The mailbox folders that should be mined. |
 | filterQuery | String | The OData query to filter the messages. |
 
@@ -35,9 +35,9 @@ The following is a JSON representation of the resource.
 
 ```json
 {
-  "includeNestedFolders": "True",
-  "isSupported": "True",
-  "sourceFolderIds": ["string"],
+  "includeNestedFolders": true,
+  "isSupported": true,
+  "sourceFolderIDs": ["string"],
   "filterQuery": "string"
 }
 

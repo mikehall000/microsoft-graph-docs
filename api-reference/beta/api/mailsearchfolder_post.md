@@ -35,7 +35,7 @@ In the request body, provide a JSON object with the following parameters.
 | Parameter	   | Type	|Description|
 |:---------------|:--------|:----------|
 | displayName |String |The display name of the new folder.|
-| includeNestedFolders | Boolean | How the mailbox folder hierarchy should be traversed. `True` means that a deep search should be done while `False` means a shallow search should be done instead. |
+| includeNestedFolders | Boolean | How the mailbox folder hierarchy should be traversed. `true` means that a deep search should be done while `false` means a shallow search should be done instead. |
 | sourceFolderIDs | String collection | The mailbox folders that should be mined. |
 | filterQuery | String | The OData query to filter the messages. |
 
@@ -56,7 +56,7 @@ Content-length: 159
 
 {
   "displayName": "displayName-value",
-  "includeNestedFolders": True,
+  "includeNestedFolders": true,
   "sourceFolderIDs": ["AAMkAGVmMDEzMTM4LTZmYWUtNDdkNC1hMDZiLTU1OGY5OTZhYmY4OAAuAAAAAAAiQ8W967B7TKBjgx9rVEURAQAiIsqMbYjsT5e-T7KzowPTAAAAAAEMAAA="],
   "filterQuery": "((Sender/EmailAddress/Address eq 'admin@abc.com' and contains(Subject, 'some message')))"
 }
@@ -82,8 +82,8 @@ Content-length: 179
   "unreadItemCount": 99,
   "totalItemCount": 99,
   "id": "id-value",
-  "isSupported": True,
-  "includeNestedFolders": True,
+  "isSupported": true,
+  "includeNestedFolders": true,
   "sourceFolderIDs": ["AAMkAGVmMDEzMTM4LTZmYWUtNDdkNC1hMDZiLTU1OGY5OTZhYmY4OAAuAAAAAAAiQ8W967B7TKBjgx9rVEURAQAiIsqMbYjsT5e-T7KzowPTAAAAAAEMAAA="],
   "filterQuery": "((Sender/EmailAddress/Address eq 'admin@abc.com' and contains(Subject, 'some message')))"
 }

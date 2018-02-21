@@ -32,7 +32,7 @@ In the request body, supply the values for relevant fields that should be update
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 | displayName | String |The mailFolder's display name.|
-| includeNestedFolders | Boolean | How the mailbox folder hierarchy should be traversed. `True` means that a deep search should be done while `False` means a shallow search should be done instead. |
+| includeNestedFolders | Boolean | How the mailbox folder hierarchy should be traversed. `true` means that a deep search should be done while `false` means a shallow search should be done instead. |
 | sourceFolderIDs | String collection | The mailbox folders that should be mined. |
 | filterQuery | String | The OData query to filter the messages. |
 
@@ -44,7 +44,7 @@ If successful, this method returns a `200 OK` response code and updated [mailFol
 The following is an example of the request.
 <!-- {
   "blockType": "request",
-  "name": "update_mailfolder"
+  "name": "update_mailsearchfolder"
 }-->
 ```http
 PATCH https://graph.microsoft.com/beta/me/mailFolders/AAMkAGVmMDEzMTM4LTZmYWUtNDdkNC1hMDZiLTU1OGY5OTZhYmY4OAAuAAAAAAAiQ8W967B7TKBjgx9rVEURAQAiIsqMbYjsT5e-T7KzowPTAAAAAAEMAAA=
@@ -53,8 +53,8 @@ Content-length: 159
 
 {
     "displayName": "displayName-value",
-    "isSupported": True,
-    "includeNestedFolders": True,
+    "isSupported": true,
+    "includeNestedFolders": true,
     "sourceFolderIDs": ["AAMkAGVmMDEzMTM4LTZmYWUtNDdkNC1hMDZiLTU1OGY5OTZhYmY4OAAuAAAAAAAiQ8W967B7TKBjgx9rVEURAQAiIsqMbYjsT5e-T7KzowPTAAAAAAEMAAA="],
     "filterQuery": "((Sender/EmailAddress/Address eq 'admin@abc.com' and contains(Subject, 'some message')))"
 }
@@ -80,8 +80,8 @@ Content-length: 179
     "childFolderCount": 2,
     "unreadItemCount": 59,
     "totalItemCount": 60,
-    "isSupported": True,
-    "includeNestedFolders": True,
+    "isSupported": true,
+    "includeNestedFolders": true,
     "sourceFolderIDs": ["AAMkAGVmMDEzMTM4LTZmYWUtNDdkNC1hMDZiLTU1OGY5OTZhYmY4OAAuAAAAAAAiQ8W967B7TKBjgx9rVEURAQAiIsqMbYjsT5e-T7KzowPTAAAAAAEMAAA="],
     "filterQuery": "((Sender/EmailAddress/Address eq 'admin@abc.com' and contains(Subject, 'some message')))"
 }
