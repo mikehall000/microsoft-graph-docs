@@ -76,7 +76,7 @@ The following is an example of the request.
   "name": "get_mailfolder"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/me/mailFolders/AAMkAGVmMDEzMTM4LTZmYWUtNDdkNC1hMDZiLTU1OGY5OTZhYmY4OAAuAAAAAAAiQ8W967B7TKBjgx9rVEURAQAiIsqMbYjsT5e-T7KzowPTAAAAAAEMAAA=
+GET https://graph.microsoft.com/beta/me/mailFolders/AAMkAGVmMDEzM
 ```
 
 #### Response
@@ -93,9 +93,9 @@ Content-type: application/json
 Content-length: 179
 
 {
-    "id": "AAMkAGVmMDEzMTM4LTZmYWUtNDdkNC1hMDZiLTU1OGY5OTZhYmY4OAAuAAAAAAAiQ8W967B7TKBjgx9rVEURAQAiIsqMbYjsT5e-T7KzowPTAAAAAAEMAAA=",
+    "id": "AAMkAGVmMDEzM",
     "displayName": "Inbox",
-    "parentFolderId": "AAMkAGVmMDEzMTM4LTZmYWUtNDdkNC1hMDZiLTU1OGY5OTZhYmY4OAAuAAAAAAAiQ8W967B7TKBjgx9rVEURAQAiIsqMbYjsT5e-T7KzowPTAAAAAAEIAAA=",
+    "parentFolderId": "AAMkAGVmMDEzI",
     "childFolderCount": 2,
     "unreadItemCount": 59,
     "totalItemCount": 60,

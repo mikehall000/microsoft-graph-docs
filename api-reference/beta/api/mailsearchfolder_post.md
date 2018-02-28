@@ -2,7 +2,7 @@
 
 > **Important:** APIs under the /beta version in Microsoft Graph are in preview and are subject to change. Use of these APIs in production applications is not supported.
 
-Use this API to create a new [mailSearchFolder](../resources/mailsearchfolder.md).
+Use this API to create a new [mailSearchFolder](../resources/mailsearchfolder.md) in the specified user's mailbox.
 
 ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](../../../concepts/permissions_reference.md).
@@ -57,7 +57,7 @@ Content-length: 159
 {
   "displayName": "displayName-value",
   "includeNestedFolders": true,
-  "sourceFolderIDs": ["AAMkAGVmMDEzMTM4LTZmYWUtNDdkNC1hMDZiLTU1OGY5OTZhYmY4OAAuAAAAAAAiQ8W967B7TKBjgx9rVEURAQAiIsqMbYjsT5e-T7KzowPTAAAAAAEMAAA="],
+  "sourceFolderIDs": ["AAMkAGVmMDEzM"],
   "filterQuery": "((Sender/EmailAddress/Address eq 'admin@abc.com' and contains(Subject, 'some message')))"
 }
 ```
@@ -84,7 +84,7 @@ Content-length: 179
   "id": "id-value",
   "isSupported": true,
   "includeNestedFolders": true,
-  "sourceFolderIDs": ["AAMkAGVmMDEzMTM4LTZmYWUtNDdkNC1hMDZiLTU1OGY5OTZhYmY4OAAuAAAAAAAiQ8W967B7TKBjgx9rVEURAQAiIsqMbYjsT5e-T7KzowPTAAAAAAEMAAA="],
+  "sourceFolderIDs": ["AAMkAGVmMDEzM"],
   "filterQuery": "((Sender/EmailAddress/Address eq 'admin@abc.com' and contains(Subject, 'some message')))"
 }
 ```

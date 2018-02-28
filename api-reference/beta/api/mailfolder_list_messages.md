@@ -2,7 +2,7 @@
 
 > **Important:** APIs under the /beta version in Microsoft Graph are in preview and are subject to change. Use of these APIs in production applications is not supported.
 
-Get all the messages in the signed-in user's mailbox, or those messages in a specified folder in the mailbox or drive.
+List all the messages in the signed-in user's mailbox, or those messages in a specified folder in the mailbox or drive.
 
 ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](../../../concepts/permissions_reference.md).
@@ -42,7 +42,7 @@ The following is an example of the request.
   "name": "get_messages"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/me/mailFolders/AAMkAGVmMDEzMTM4LTZmYWUtNDdkNC1hMDZiLTU1OGY5OTZhYmY4OAAuAAAAAAAiQ8W967B7TKBjgx9rVEURAQAiIsqMbYjsT5e-T7KzowPTAAAAAAEMAAA=/messages
+GET https://graph.microsoft.com/beta/me/mailFolders/AAMkAGVmMDEzM/messages
 ```
 
 #### Response
@@ -63,7 +63,7 @@ Content-length: 317
 {
   "value": [
     {
-      "id": "AAMkAGVmMDEzMTM4LTZmYWUtNDdkNC1hMDZiLTU1OGY5OTZhYmY4OABGAAAAAAAiQ8W967B7TKBjgx9rVEURBwAiIsqMbYjsT5e-T7KzowPTAAAAAAEMAAAiIsqMbYjsT5e-T7KzowPTAACB5kmrAAA=",
+      "id": "AAMkAGVmMDEzK",
       "createdDateTime": "2018-02-13T03:53:55Z",
       "lastModifiedDateTime": "2018-02-13T03:53:55Z",
       "changeKey": "CQAAABYAAAAiIsqMbYjsT5e/T7KzowPTAACB/CZh",
@@ -75,14 +75,14 @@ Content-length: 317
       "subject": "MyAnalytics | Your past week",
       "bodyPreview": "February 4-10, 2018\r\n\r\n\r\nHi Megan Bowen,\r\n\r\nWe've got your highlights from last week\r\n\r\n\r\n\r\nYour time\r\n\r\n\r\nEmail hours\r\n\r\n\r\n\r\n\r\n0 hrs\r\n\r\n\r\n\r\nMeeting hours\r\n\r\n\r\n\r\n\r\n12 hrs\r\n\r\n\r\n\r\n\r\nFocus hours\r\n\r\n\r\n\r\n\r\n30 hrs\r\n\r\n\r\n\r\n\r\n\r\nGoals keep you motivated. Set them",
       "importance": "normal",
-      "parentFolderId": "AAMkAGVmMDEzMTM4LTZmYWUtNDdkNC1hMDZiLTU1OGY5OTZhYmY4OAAuAAAAAAAiQ8W967B7TKBjgx9rVEURAQAiIsqMbYjsT5e-T7KzowPTAAAAAAEMAAA=",
-      "conversationId": "AAQkAGVmMDEzMTM4LTZmYWUtNDdkNC1hMDZiLTU1OGY5OTZhYmY4OAAQAGXy5YX-w51CuehQz-qlH3E=",
+      "parentFolderId": "AAMkAGVmMDEzM",
+      "conversationId": "AAQkAGVmMDEzE",
       "conversationIndex": "AQHTpH5EZfLlhf/DnUK56FDP+qUfcQ==",
       "isDeliveryReceiptRequested": false,
       "isReadReceiptRequested": false,
       "isRead": false,
       "isDraft": false,
-      "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkAGVmMDEzMTM4LTZmYWUtNDdkNC1hMDZiLTU1OGY5OTZhYmY4OABGAAAAAAAiQ8W967B7TKBjgx9rVEURBwAiIsqMbYjsT5e%2FT7KzowPTAAAAAAEMAAAiIsqMbYjsT5e%2FT7KzowPTAACB5kmrAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "webLink": "https://outlook.office365.com/owa/?ItemID=AAMkAGVmMDEzK&exvsurl=1&viewmodel=ReadMessageItem",
       "inferenceClassification": "other",
       "unsubscribeData": [],
       "unsubscribeEnabled": false,

@@ -43,7 +43,7 @@ The following is an example of the request.
   "name": "get_childfolders"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/me/mailFolders/AAMkAGVmMDEzMTM4LTZmYWUtNDdkNC1hMDZiLTU1OGY5OTZhYmY4OAAuAAAAAAAiQ8W967B7TKBjgx9rVEURAQAiIsqMbYjsT5e-T7KzowPTAAAAAAEMAAA=/childFolders
+GET https://graph.microsoft.com/beta/me/mailFolders/AAMkAGVmMDEzM/childFolders
 ```
 
 #### Response
@@ -64,18 +64,18 @@ Content-length: 232
 {
   "value": [
     {
-        "id": "AAMkAGVmMDEzMTM4LTZmYWUtNDdkNC1hMDZiLTU1OGY5OTZhYmY4OAAuAAAAAAAiQ8W967B7TKBjgx9rVEURAQAiIsqMbYjsT5e-T7KzowPTAAAYbtbpAAA=",
+        "id": "AAMkAGVmMDEzA",
         "displayName": "Internal Screens",
-        "parentFolderId": "AAMkAGVmMDEzMTM4LTZmYWUtNDdkNC1hMDZiLTU1OGY5OTZhYmY4OAAuAAAAAAAiQ8W967B7TKBjgx9rVEURAQAiIsqMbYjsT5e-T7KzowPTAAAAAAEMAAA=",
+        "parentFolderId": "AAMkAGVmMDEzM",
         "childFolderCount": 0,
         "unreadItemCount": 2,
         "totalItemCount": 2,
         "wellKnownName": null
     },
     {
-        "id": "AAMkAGVmMDEzMTM4LTZmYWUtNDdkNC1hMDZiLTU1OGY5OTZhYmY4OAAuAAAAAAAiQ8W967B7TKBjgx9rVEURAQAiIsqMbYjsT5e-T7KzowPTAAAYbtbqAAA=",
+        "id": "AAMkAGVmMDEzB",
         "displayName": "Project Falcon",
-        "parentFolderId": "AAMkAGVmMDEzMTM4LTZmYWUtNDdkNC1hMDZiLTU1OGY5OTZhYmY4OAAuAAAAAAAiQ8W967B7TKBjgx9rVEURAQAiIsqMbYjsT5e-T7KzowPTAAAAAAEMAAA=",
+        "parentFolderId": "AAMkAGVmMDEzM",
         "childFolderCount": 0,
         "unreadItemCount": 5,
         "totalItemCount": 5,

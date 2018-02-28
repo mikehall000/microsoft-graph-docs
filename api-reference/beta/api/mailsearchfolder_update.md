@@ -2,7 +2,7 @@
 
 > **Important:** APIs under the /beta version in Microsoft Graph are in preview and are subject to change. Use of these APIs in production applications is not supported.
 
-Update the properties of [mailSearchFolder](../resources/mailsearchfolder.md) object.
+Update the writable properties of [mailSearchFolder](../resources/mailsearchfolder.md) object.
 
 ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](../../../concepts/permissions_reference.md).
@@ -31,7 +31,7 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-| displayName | String |The mailFolder's display name.|
+| displayName | String | The display name of the [mailFolder](../resources/mailfolder.md).|
 | includeNestedFolders | Boolean | How the mailbox folder hierarchy should be traversed. `true` means that a deep search should be done while `false` means a shallow search should be done instead. |
 | sourceFolderIDs | String collection | The mailbox folders that should be mined. |
 | filterQuery | String | The OData query to filter the messages. |
@@ -47,7 +47,7 @@ The following is an example of the request.
   "name": "update_mailsearchfolder"
 }-->
 ```http
-PATCH https://graph.microsoft.com/beta/me/mailFolders/AAMkAGVmMDEzMTM4LTZmYWUtNDdkNC1hMDZiLTU1OGY5OTZhYmY4OAAuAAAAAAAiQ8W967B7TKBjgx9rVEURAQAiIsqMbYjsT5e-T7KzowPTAAAAAAEMAAA=
+PATCH https://graph.microsoft.com/beta/me/mailFolders/AAMkAGVmMDEzM
 Content-type: application/json
 Content-length: 159
 
@@ -55,7 +55,7 @@ Content-length: 159
     "displayName": "displayName-value",
     "isSupported": true,
     "includeNestedFolders": true,
-    "sourceFolderIDs": ["AAMkAGVmMDEzMTM4LTZmYWUtNDdkNC1hMDZiLTU1OGY5OTZhYmY4OAAuAAAAAAAiQ8W967B7TKBjgx9rVEURAQAiIsqMbYjsT5e-T7KzowPTAAAAAAEMAAA="],
+    "sourceFolderIDs": ["AAMkAGVmMDEzM"],
     "filterQuery": "((Sender/EmailAddress/Address eq 'admin@abc.com' and contains(Subject, 'some message')))"
 }
 ```
@@ -74,15 +74,15 @@ Content-type: application/json
 Content-length: 179
 
 {
-    "id": "AAMkAGVmMDEzMTM4LTZmYWUtNDdkNC1hMDZiLTU1OGY5OTZhYmY4OAAuAAAAAAAiQ8W967B7TKBjgx9rVEURAQAiIsqMbYjsT5e-T7KzowPTAAAAAAEMAAA=",
+    "id": "AAMkAGVmMDEzM",
     "displayName": "displayName-value",
-    "parentFolderId": "AAMkAGVmMDEzMTM4LTZmYWUtNDdkNC1hMDZiLTU1OGY5OTZhYmY4OAAuAAAAAAAiQ8W967B7TKBjgx9rVEURAQAiIsqMbYjsT5e-T7KzowPTAAAAAAEIAAA=",
+    "parentFolderId": "AAMkAGVmMDEzI",
     "childFolderCount": 2,
     "unreadItemCount": 59,
     "totalItemCount": 60,
     "isSupported": true,
     "includeNestedFolders": true,
-    "sourceFolderIDs": ["AAMkAGVmMDEzMTM4LTZmYWUtNDdkNC1hMDZiLTU1OGY5OTZhYmY4OAAuAAAAAAAiQ8W967B7TKBjgx9rVEURAQAiIsqMbYjsT5e-T7KzowPTAAAAAAEMAAA="],
+    "sourceFolderIDs": ["AAMkAGVmMDEzM"],
     "filterQuery": "((Sender/EmailAddress/Address eq 'admin@abc.com' and contains(Subject, 'some message')))"
 }
 ```

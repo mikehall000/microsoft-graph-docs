@@ -44,7 +44,7 @@ The following is an example of the request.
   "name": "update_mailfolder"
 }-->
 ```http
-PATCH https://graph.microsoft.com/beta/me/mailFolders/AAMkAGVmMDEzMTM4LTZmYWUtNDdkNC1hMDZiLTU1OGY5OTZhYmY4OAAuAAAAAAAiQ8W967B7TKBjgx9rVEURAQAiIsqMbYjsT5e-T7KzowPTAAAAAAEMAAA=
+PATCH https://graph.microsoft.com/beta/me/mailFolders/AAMkAGVmMDEzM
 Content-type: application/json
 Content-length: 159
 
@@ -67,9 +67,9 @@ Content-type: application/json
 Content-length: 179
 
 {
-    "id": "AAMkAGVmMDEzMTM4LTZmYWUtNDdkNC1hMDZiLTU1OGY5OTZhYmY4OAAuAAAAAAAiQ8W967B7TKBjgx9rVEURAQAiIsqMbYjsT5e-T7KzowPTAAAAAAEMAAA=",
+    "id": "AAMkAGVmMDEzM",
     "displayName": "displayName-value",
-    "parentFolderId": "AAMkAGVmMDEzMTM4LTZmYWUtNDdkNC1hMDZiLTU1OGY5OTZhYmY4OAAuAAAAAAAiQ8W967B7TKBjgx9rVEURAQAiIsqMbYjsT5e-T7KzowPTAAAAAAEIAAA=",
+    "parentFolderId": "AAMkAGVmMDEzI",
     "childFolderCount": 2,
     "unreadItemCount": 59,
     "totalItemCount": 60,
