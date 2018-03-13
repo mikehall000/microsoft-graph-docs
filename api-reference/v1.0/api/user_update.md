@@ -12,6 +12,7 @@ One of the following permissions is required to call this API. To learn more, in
 |Application | User.ReadWrite.All, Directory.ReadWrite.All |
 
 When updating the passwordProfile property, the following permission is required: Directory.AccessAsUser.All.
+When updating the mobilePhone property, the following permission is required: Directory.ReadWrite.All or Directory.AccessAsUser.All.
 
 ## HTTP request
 <!-- { "blockType": "ignored" } -->
